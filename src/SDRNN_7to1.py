@@ -74,18 +74,18 @@ def train_callback():
     global tepochs
     epochs = int(entry_epochs.get())
     for i in range(epochs):
-        MSE = 0.0
-        MSE += sdrnn.bp([1,1,1,1,1,1,0],[0.05])    #0 pattern
-        MSE += sdrnn.bp([0,1,1,0,0,0,0],[0.15])    #1 pattern
-        MSE += sdrnn.bp([1,1,0,1,1,0,1],[0.25])    #2 pattern
-        MSE += sdrnn.bp([1,1,1,1,0,0,1],[0.35])    #3 pattern
-        MSE += sdrnn.bp([0,1,1,0,0,1,1],[0.45])    #4 pattern
-        MSE += sdrnn.bp([1,0,1,1,0,1,1],[0.55])    #5 pattern
-        MSE += sdrnn.bp([1,0,1,1,1,1,1],[0.65])    #6 pattern
-        MSE += sdrnn.bp([1,1,1,0,0,0,0],[0.75])    #7 pattern
-        MSE += sdrnn.bp([1,1,1,1,1,1,1],[0.85])    #8 pattern
-        MSE += sdrnn.bp([1,1,1,1,0,1,1],[0.95])    #9 pattern
-    lbl_err.configure(text="{0:.10f}".format(MSE/10.0))
+        mse = 0.0
+        mse += sdrnn.bp([1,1,1,1,1,1,0],[0.05])    #0 pattern
+        mse += sdrnn.bp([0,1,1,0,0,0,0],[0.15])    #1 pattern
+        mse += sdrnn.bp([1,1,0,1,1,0,1],[0.25])    #2 pattern
+        mse += sdrnn.bp([1,1,1,1,0,0,1],[0.35])    #3 pattern
+        mse += sdrnn.bp([0,1,1,0,0,1,1],[0.45])    #4 pattern
+        mse += sdrnn.bp([1,0,1,1,0,1,1],[0.55])    #5 pattern
+        mse += sdrnn.bp([1,0,1,1,1,1,1],[0.65])    #6 pattern
+        mse += sdrnn.bp([1,1,1,0,0,0,0],[0.75])    #7 pattern
+        mse += sdrnn.bp([1,1,1,1,1,1,1],[0.85])    #8 pattern
+        mse += sdrnn.bp([1,1,1,1,0,1,1],[0.95])    #9 pattern
+    lbl_err.configure(text="{0:.10f}".format(mse/10.0))
     tepochs += epochs
     lbl_tepochs.configure(text = tepochs)
     run_ann()
