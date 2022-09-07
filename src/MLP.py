@@ -13,5 +13,5 @@ class Perceptron:
 
     def run(self, x):
         """Run the perceptron. x is a python list with the input values."""
-        xsum = np.dot(np.append(x,self.bias),self.weights)
-        return self.sigmoid(xsum)
+        x_sum = np.dot(np.append(x,self.bias),self.weights)
+        return self.sigmoid(x_sum)
