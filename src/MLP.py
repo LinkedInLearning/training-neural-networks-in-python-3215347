@@ -133,7 +133,7 @@ for i in range(epochs):
     mse += mlp.bp([1,1,1,0,0,0,0],[0.75])    #7 pattern
     mse += mlp.bp([1,1,1,1,1,1,1],[0.85])    #8 pattern
     mse += mlp.bp([1,1,1,1,0,1,1],[0.95])    #9 pattern
-    mse = mse/10
+    mse = mse/10.0
 
 
 # Dataset for the 7 to 10 network
@@ -149,7 +149,7 @@ for i in range(epochs):
     mse += mlp.bp([1,1,1,0,0,0,0],[0,0,0,0,0,0,0,1,0,0])    #7 pattern
     mse += mlp.bp([1,1,1,1,1,1,1],[0,0,0,0,0,0,0,0,1,0])    #8 pattern
     mse += mlp.bp([1,1,1,1,0,1,1],[0,0,0,0,0,0,0,0,0,1])    #9 pattern
-    mse = mse/10
+    mse = mse/10.0
 
 
 # Dataset for the 7 to 7 network
@@ -165,4 +165,4 @@ for i in range(epochs):
     mse += mlp.bp([1,1,1,0,0,0,0],[1,1,1,0,0,0,0])    #7 pattern
     mse += mlp.bp([1,1,1,1,1,1,1],[1,1,1,1,1,1,1])    #8 pattern
     mse += mlp.bp([1,1,1,1,0,1,1],[1,1,1,1,0,1,1])    #9 pattern
-    mse = mse/10
+    mse = mse/10.0
