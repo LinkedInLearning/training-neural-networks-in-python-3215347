@@ -4,7 +4,7 @@ class Perceptron:
     """A single neuron with the sigmoid activation function.
        Attributes:
           inputs: The number of inputs in the perceptron, not counting the bias.
-          bias:   The bias term. By defaul it's 1.0."""
+          bias:   The bias term. By default it's 1.0."""
 
     def __init__(self, inputs, bias = 1.0):
         """Return a new Perceptron object with the specified number of inputs (+1 for the bias).""" 
@@ -13,8 +13,8 @@ class Perceptron:
 
     def run(self, x):
         """Run the perceptron. x is a python list with the input values."""
-        sum = np.dot(np.append(x,self.bias),self.weights)
-        return self.sigmoid(sum)
+        x_sum = np.dot(np.append(x,self.bias),self.weights)
+        return self.sigmoid(x_sum)
 
     def set_weights(self, w_init):
         """Set the weights. w_init is a python list with the weights."""
@@ -105,7 +105,7 @@ class MultiLayerPerceptron:
         for i in range(1,len(self.network)):
             for j in range(self.layers[i]):
                 for k in range(self.layers[i-1]+1):
-                    # fill in the blank
+                    pass# fill in the blank
         return MSE
 
 
@@ -114,14 +114,14 @@ class MultiLayerPerceptron:
 mlp = MultiLayerPerceptron(layers=[2,2,1])
 print("\nTraining Neural Network as an XOR Gate...\n")
 for i in range(3000):
-    MSE = 0.0
-    MSE += mlp.bp([0,0],[0])
-    MSE += mlp.bp([0,1],[1])
-    MSE += mlp.bp([1,0],[1])
-    MSE += mlp.bp([1,1],[0])
-    MSE = MSE / 4
+    mse = 0.0
+    mse += mlp.bp([0,0],[0])
+    mse += mlp.bp([0,1],[1])
+    mse += mlp.bp([1,0],[1])
+    mse += mlp.bp([1,1],[0])
+    mse = mse / 4
     if(i%100 == 0):
-        print (MSE)
+        print (mse)
 
 mlp.printWeights()
     
