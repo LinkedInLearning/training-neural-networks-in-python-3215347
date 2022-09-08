@@ -66,7 +66,7 @@ class MultiLayerPerceptron:
             for j in range(len(w_init[i])):
                 self.network[i+1][j].set_weights(w_init[i][j])
 
-    def printWeights(self):
+    def print_weights(self):
         print()
         for i in range(1, len(self.network)):
             for j in range(self.layers[i]):
@@ -134,7 +134,7 @@ for i in range(3000):
     if (i % 100 == 0):
         print(mse)
 
-mlp.printWeights()
+mlp.print_weights()
 
 print("MLP:")
 print("0 0 = {0:.10f}".format(mlp.run([0, 0])[0]))
