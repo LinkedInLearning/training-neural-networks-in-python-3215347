@@ -53,7 +53,7 @@ class MultiLayerPerceptron:
 
     def set_weights(self, w_init):
         """Set the weights. 
-           w_init is a list of lists with the weights for all but the input layer."""
+           w_init is a 3D list with the weights for all but the input layer."""
         for i in range(len(w_init)):
             for j in range(len(w_init[i])):
                 self.network[i+1][j].set_weights(w_init[i][j])
