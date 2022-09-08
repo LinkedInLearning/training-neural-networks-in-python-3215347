@@ -119,7 +119,10 @@ class MultiLayerPerceptron:
 
 #test code
 
-
+mlp = MultiLayerPerceptron(layers=[7,7,1])
+print()
+input_pattern = list(map(float, input("Input pattern 'a b c d e f g': ").strip().split()))
+epochs = 3000
 # Dataset for the 7 to 1 network
 for i in range(epochs):
     mse = 0.0
@@ -135,6 +138,11 @@ for i in range(epochs):
     mse += mlp.bp([1,1,1,1,0,1,1],[0.95])    #9 pattern
     mse = mse/10.0
 
+print("The number recognized by the 7 to 1 network is", \
+      int(mlp.run(input_pattern)*10))
+
+
+mlp = MultiLayerPerceptron(layers=[7,7,10])
 
 # Dataset for the 7 to 10 network
 for i in range(epochs):
@@ -151,6 +159,11 @@ for i in range(epochs):
     mse += mlp.bp([1,1,1,1,0,1,1],[0,0,0,0,0,0,0,0,0,1])    #9 pattern
     mse = mse/10.0
 
+print("The number recognized by the 7 to 10 network is", \
+      np.argmax(mlp.run(input_pattern)))
+
+
+mlp = MultiLayerPerceptron(layers=[7,7,7])
 
 # Dataset for the 7 to 7 network
 for i in range(epochs):
@@ -166,3 +179,6 @@ for i in range(epochs):
     mse += mlp.bp([1,1,1,1,1,1,1],[1,1,1,1,1,1,1])    #8 pattern
     mse += mlp.bp([1,1,1,1,0,1,1],[1,1,1,1,0,1,1])    #9 pattern
     mse = mse/10.0
+
+print("The pattern recognized by the 7 to 7 network is", \
+      [int(x) for x in (mlp.run(input_pattern) + 0.5)] ,"\n")
