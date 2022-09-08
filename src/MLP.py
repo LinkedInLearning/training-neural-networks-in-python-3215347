@@ -122,7 +122,7 @@ mlp = MultiLayerPerceptron(layers=[7,7,1])
 print()
 pattern = list(map(float, input("Input pattern 'a b c d e f g': ").strip().split()))
 print()
-epochs = 3000
+epochs = 2000
 
 # Dataset for the 7 to 1 network
 for i in range(epochs):
