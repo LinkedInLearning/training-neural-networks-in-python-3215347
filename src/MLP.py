@@ -118,12 +118,12 @@ class MultiLayerPerceptron:
 
 
 #test code
-
 mlp = MultiLayerPerceptron(layers=[7,7,1])
 print()
 pattern = list(map(float, input("Input pattern 'a b c d e f g': ").strip().split()))
 print()
 epochs = 3000
+
 # Dataset for the 7 to 1 network
 for i in range(epochs):
     mse = 0.0
@@ -141,7 +141,6 @@ for i in range(epochs):
 
 print("The number recognized by the 7 to 1 network is", \
       int(mlp.run(pattern)*10))
-
 
 mlp = MultiLayerPerceptron(layers=[7,7,10])
 
@@ -162,7 +161,6 @@ for i in range(epochs):
 
 print("The number recognized by the 7 to 10 network is", \
       np.argmax(mlp.run(pattern)))
-
 
 mlp = MultiLayerPerceptron(layers=[7,7,7])
 
