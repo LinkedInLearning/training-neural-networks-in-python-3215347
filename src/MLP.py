@@ -104,10 +104,8 @@ class MultiLayerPerceptron:
             for h in range(len(self.network[i])):
                 fwd_error = 0.0
                 for k in range(self.layers[i+1]):
-                    fwd_error += self.network[i +
-                                              1][k].weights[h] * self.d[i+1][k]
-                self.d[i][h] = self.values[i][h] * \
-                    (1-self.values[i][h]) * fwd_error
+                    fwd_error += self.network[i+1][k].weights[h] * self.d[i+1][k]               
+                self.d[i][h] = self.values[i][h] * (1-self.values[i][h]) * fwd_error
 
         # STEPS 5 & 6: Calculate the deltas and update the weights
         for i in range(1, len(self.network)):
