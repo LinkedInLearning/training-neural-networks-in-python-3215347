@@ -58,7 +58,7 @@ class MultiLayerPerceptron:
         # w_init is a list of floats. Organize it as you'd like. 
         pass       
 
-    def printWeights(self):
+    def print_weights(self):
         print()
         for i in range(1,len(self.network)):
             for j in range(self.layers[i]):
