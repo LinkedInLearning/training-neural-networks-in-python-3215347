@@ -31,5 +31,5 @@ Eduardo Corpeno
 Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/eduardo-corpeno?u=104).
 
 [lil-course-url]: https://www.linkedin.com/learning/training-neural-networks-in-python-17058600
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/C560DAQEETI1NQkDM_A/learning-public-crop_675_1200/0/1666380611131?e=1667955600&v=beta&t=r_clO_ruck-0tner2KRxC6ypQuy21uOh_XtI5NTr_zs
+[lil-thumbnail-url]: https://cdn.lynda.com/course/3215347/3215347-1667864479246-16x9.jpg
 [gcs-video-url]: https://www.linkedin.com/learning/training-neural-networks-in-python-17058600/using-github-codespaces-with-this-course
